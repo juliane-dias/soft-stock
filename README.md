@@ -24,8 +24,6 @@
 
 O **SoftStock Manager** é uma aplicação SPA (Single Page Application) focada em UX (Experiência do Usuário). Diferente de tabelas administrativas comuns, o sistema utiliza um design limpo, validações em tempo real para evitar erros operacionais e feedback visual imediato.
 
-O código foi refatorado para utilizar **Hooks personalizados**, isolando a lógica de negócios da interface visual, facilitando o trabalho da equipe de Back-end.
-
 ---
 
 ## 📂 Estrutura de Arquivos

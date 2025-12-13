@@ -94,10 +94,15 @@ Este projeto requer **Node.js** instalado.
 
 1. Instale as dependências:
    ```bash
+   npm init -y
+   ```
+
+2. Instale as dependências:
+   ```bash
    npm install
    ```
 
-2. Inicie o servidor de desenvolvimento:
+3. Inicie o servidor de desenvolvimento:
    ```bash
    npm run dev
    ```

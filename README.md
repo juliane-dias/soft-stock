@@ -92,7 +92,7 @@ Abaixo, a relação entre o objeto JSON enviado pelo React e a tabela do Postgre
 
 Este projeto requer **Node.js** instalado.
 
-1. Instale as dependências:
+1. Crie o package.json:
    ```bash
    npm init -y
    ```

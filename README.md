@@ -1,4 +1,3 @@
-=======
 # 📦 SoftStock Manager
 
 ![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61DAFB)

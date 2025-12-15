@@ -55,6 +55,44 @@ app.post("/products", async (req, res) => {
   }
 });
 
+// PUT - atualizar produto
+app.put("/products/:id", async (req, res) => {
+  const { id } = req.params;
+  const { name, category, price, qty } = req.body;
+
+  try {
+    const result = await pool.query(
+      `
+      UPDATE produtos
+      SET
+        nome = $1,
+        categoria = $2,
+        preco = $3,
+        estoque = $4
+      WHERE id = $5
+      RETURNING
+        id,
+        nome      AS name,
+        categoria AS category,
+        preco     AS price,
+        estoque   AS qty
+      `,
+      [name, category, price, qty, id]
+    );
+
+    // se não achou o produto
+    if (result.rows.length === 0) {
+      return res.status(404).json({ error: "Produto não encontrado" });
+    }
+
+    res.json(result.rows[0]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Erro ao atualizar produto" });
+  }
+});
+
+
 // DELETE produto
 app.delete("/products/:id", async (req, res) => {
   const { id } = req.params;
